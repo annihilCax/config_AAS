@@ -32,3 +32,36 @@ ids=$(grep -o -E '\b[a-zA-Z]*\b' "$file" | sort -u)
 echo "$ids"
 ```
 <img width="325" alt="image" src="https://github.com/user-attachments/assets/45626d71-a952-4e18-984a-51abe4b1a95a">
+
+### Задача 5
+```bash
+
+```
+<img width="256" alt="image" src="https://github.com/user-attachments/assets/86963858-42b1-4a24-aecd-53d6bfd6b744">
+
+
+### Задача 6
+```bash
+
+```
+
+### Задача 7
+```bash
+
+```
+
+### Задача 8 
+```bash
+
+```
+
+### Задача 9
+```bash
+
+```
+
+### Задача 10
+```bash
+
+```
+
