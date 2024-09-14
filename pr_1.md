@@ -35,7 +35,11 @@ echo "$ids"
 
 ### Задача 5
 ```bash
-
+#!/bin/bash
+file=$1
+chmod 755 "./$file"
+sudo cp "$file" /usr/local/bin
+echo "'$file'. Готово"
 ```
 <img width="256" alt="image" src="https://github.com/user-attachments/assets/86963858-42b1-4a24-aecd-53d6bfd6b744">
 
