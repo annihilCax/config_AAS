@@ -16,7 +16,8 @@ cat /etc/protocols | tail -n 5 | sort -k2 | awk '{print $2, $1}'
 #!/bin/bash
 text=$*
 length=${#text}
-for _ in $(seq 1 $((length + 2))); do line+="-"
+for _ in $(seq 1 $((length + 2))); do
+  line+="-"
 done
 echo "+${line}+"
 echo "| ${text} |"
@@ -46,26 +47,73 @@ echo "'$file'. Готово"
 
 ### Задача 6
 ```bash
+#!/bin/bash
 
+for file in *.c *.js *.py; do
+    line=$(head -n 1 "$file")
+    if [[ $line == "#"* || $line == "//"* || $line == "/*"* ]]; then
+        echo "В первой строке файла $file есть комментарий"
+    else
+        echo "В первой строке файла $file нет комментария"
+    fi
+done
 ```
 
 ### Задача 7
 ```bash
+#!/bin/bash
 
+declare -A duplicats
+
+findDuplicates() 
+{
+    local dir="$1"
+    
+    # для всех файлов и подкаталогов в данном каталоге
+    for file in "$dir"/*; do
+        # если файл
+        if [[ -f "$file" ]]; then
+            # оставить имя файла
+            file=$(basename "$file")
+            if [ duplicats["$file"] ]; then
+                duplicats["$file"]=$((duplicats["$file"] + 1))
+            else
+                duplicats["$file"]=1
+            fi
+        # Если подкаталог
+        elif [[ -d "$file" ]]; then
+            findDuplicates "$file"
+        fi
+    done
+}
+
+findDuplicates "."
 ```
 
 ### Задача 8 
 ```bash
+#!/bin/bash
 
+files=( $(find . -type f -name "*.$1") )
+tar -cvf "archive.tar" "${files[@]}"
 ```
 
 ### Задача 9
 ```bash
+#!/bin/bash
 
+sed 's/    /\t/g' "$1" > "$2"
 ```
 
 ### Задача 10
 ```bash
+#!/bin/bash
 
+echo "Пустые файлы:"
+for file in "$1"/*; do
+    if [[ -f "$file" && ! -s "$file" ]]; then
+        echo "$file"
+    fi
+done
 ```
 
