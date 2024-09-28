@@ -56,6 +56,22 @@ git clone https://github.com/expressjs/express.git
 
 ## Задача 4
 
+>_Решить на MiniZinc задачу о счастливых билетах. Добавить ограничение на то, что все цифры билета должны быть различными (подсказка: используйте all_different). Найти минимальное решение для суммы 3 цифр._
+```
+include "alldifferent.mzn";
+
+array[1..6] of var 0..9: arr;
+constraint all_different(arr);
+
+constraint sum(arr[1..3]) = sum(arr[4..6]);
+var int: S = sum(arr[1..3]);
+
+solve minimize S;
+output ["Набор чисел: ", show(arr), 
+"\nСумма: ", show(S)];
+```
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/5ba35ffb-ba07-4d82-b15b-28d490cb6a67">
+
 ## Задача 5
 
 ## Задача 6
