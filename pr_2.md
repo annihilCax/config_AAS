@@ -59,7 +59,7 @@ pipdeptree --graph-output dot > matplotlib_deps.dot
 ```
 dot -Tpng matplotlib_deps.dot -o matplotlib_deps.png
 ```
-### !!Добавить позже!!!!!
+### !!Добавить скрины!!!!!
 
 ## Задача 4
 
