@@ -59,6 +59,8 @@ pipdeptree --graph-output dot > matplotlib_deps.dot
 ```
 dot -Tpng matplotlib_deps.dot -o matplotlib_deps.png
 ```
+### Добавить позже
+
 ## Задача 4
 
 >_Решить на MiniZinc задачу о счастливых билетах. Добавить ограничение на то, что все цифры билета должны быть различными (подсказка: используйте all_different). Найти минимальное решение для суммы 3 цифр._
