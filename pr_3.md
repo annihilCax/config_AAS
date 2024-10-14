@@ -17,15 +17,24 @@
 > _Язык нулей и единиц._
 
 ```py
-
+BNF = '''
+E = l | l E
+l = 0 | 1 
+'''
 ```
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/82964706-d28f-441f-b47a-529b6db19e04">
 
 ## Задача 4
 > _Язык правильно расставленных скобок двух видов._
 
 ```py
-
+BNF = '''
+E = l 
+l = () | {} | ( l ) | { l }
+'''
 ```
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/87ea90e9-e814-404f-8b25-69620a74b21a">
+
 
 ## Задача 5
 > _Язык выражений алгебры логики._
