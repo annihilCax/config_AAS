@@ -40,5 +40,13 @@ l = () | {} | ( l ) | { l }
 > _Язык выражений алгебры логики._
 
 ```py
-
+BNF = '''
+E = L | ( L ) bin_op ( E )
+var = x | y
+unar_op = ~
+bin_op = & | +
+L = var bin_op var | unar_op var | ( var ) 
+'''
 ```
+<img width="260" alt="image" src="https://github.com/user-attachments/assets/ccbeb2bf-e41c-40bd-a49d-423fe4f50522">
+
