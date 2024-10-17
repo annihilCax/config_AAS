@@ -48,5 +48,5 @@ bin_op = & | +
 L = var bin_op var | unar_op var | ( var ) 
 '''
 ```
-<img width="260" alt="image" src="https://github.com/user-attachments/assets/ccbeb2bf-e41c-40bd-a49d-423fe4f50522">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/ccbeb2bf-e41c-40bd-a49d-423fe4f50522">
 
