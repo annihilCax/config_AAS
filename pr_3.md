@@ -8,7 +8,7 @@ local students = [
     { "age": 19, "group": "ИКБО-4-20", "name": "Иванов И.И." },
     { "age": 18, "group": "ИКБО-5-20", "name": "Петров П.П." },
     { "age": 18, "group": "ИКБО-5-20", "name": "Сидоров С.С." },
-    { "age": 20, "group": "ИКБО-10-20", "name": "Cпесивцева А.А." }  
+    { "age": 19, "group": "ИКБО-10-20", "name": "Cпесивцева А.А." }  
 ];
 
 {
@@ -21,8 +21,22 @@ local students = [
 ## Задача 2
 > _Реализовать на Dhall приведенный ниже пример в формате JSON. Использовать в реализации свойство программируемости и принцип DRY._
 
-```
+```dhall
+let Prelude = https://prelude.dhall-lang.org/v23.0.0/package.dhall 
+let mkGroup = \(n : Natural) -> "ИКБО-" ++ Prelude.Natural.show n ++ "-20"
 
+let groups = Prelude.List.generate 24 (\(i : Natural) -> mkGroup (i + 1))
+
+let students =
+      [ { age = 19, group = mkGroup 4, name = "Иванов И.И." }
+      , { age = 18, group = mkGroup 5, name = "Петров П.П." }
+      , { age = 18, group = mkGroup 5, name = "Сидоров С.С." }
+      , { age = 19, group = mkGroup 10, name = "Спесивцева А.А." }
+      ]
+
+let subject = "Конфигурационное управление"
+
+in { groups = groups, students = students, subject = subject }
 ```
 
 ## Задачи 3-5
