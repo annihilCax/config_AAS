@@ -7,7 +7,23 @@
 ## Задача 2
 > _Создать локальный git-репозиторий. Задать свои имя и почту (далее – coder1). Разместить файл prog.py с какими-нибудь данными. Прислать в текстовом виде диалог с git._
 
+```
+e:\git\config\pr4>git init
+Initialized empty Git repository in E:/git/config/pr4/.git/
 
+e:\git\config\pr4>git config --global user.name "coder1"
+
+e:\git\config\pr4>git config --global user.email "coder1@email.com"
+
+e:\git\config\pr4>echo "#print('Hello, world!')" > prog.py
+
+e:\git\config\pr4>git add prog.py
+
+e:\git\config\pr4>git commit -m "add prog.py"
+[master (root-commit) b625377] add prog.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 prog.py
+```
 
 ## Задача 3
 > _Прислать список набранных команд и содержимое git log._
