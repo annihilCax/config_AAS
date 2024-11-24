@@ -1,7 +1,9 @@
 ## Задача 1
 > _Изучите возможности просмотра байткода ВМ CPython._
 > _Опишите по шагам, что делает каждая из следующих команд (приведите эквивалентное выражение на Python)_
-> 11 0 LOAD_FAST 0 (x) 2 LOAD_CONST 1 (10) 4 BINARY_MULTIPLY 6 LOAD_CONST 2 (42) 8 BINARY_ADD 10 RETURN_VALUE
+```
+11 0 LOAD_FAST 0 (x) 2 LOAD_CONST 1 (10) 4 BINARY_MULTIPLY 6 LOAD_CONST 2 (42) 8 BINARY_ADD 10 RETURN_VALUE
+```
 
 
 
@@ -35,11 +37,6 @@
 ## Задача 3
 > Приведите результаты из задач 1 и 2 для виртуальной машины JVM (Java) или .Net (C#).
 
-```
-
-```
-
-### log
 ```
 
 ```
