@@ -64,12 +64,57 @@ def factorial(n):
 ```
 
 ## Задача 3
-> Приведите результаты из задач 1 и 2 для виртуальной машины JVM (Java) или .Net (C#).
+> Приведите результаты из задач 1 и 2 для виртуальной машины JVM (Java).
 
+Задание 1
+```java
+while (x != 0) {
+ x -= 1;
+}
+return x + 1;
 ```
 
+```java
+0: iload_0       
+1: ifeq 11        
+4: iinc 0, -1      
+7: goto 0         
+11: iload_0         
+12: iconst_1        
+13: iadd           
+14: ireturn         
 ```
 
+Задание 2
+```java
+public static int factorial(int n) {
+    int r = 1;
+    while (n > 1) {
+        r *= n;
+        n -= 1;
+    }
+    return r;
+}
+```
+
+```java
+0: iconst_1     
+1: istore_1      
+2: iload_0        
+3: iconst_1        
+4: if_icmple 19   
+7: iload_1        
+8: iload_0       
+9: imul         
+10: istore_1      
+11: iload_0       
+12: iconst_1      
+13: isub          
+14: istore_0      
+15: goto 2         
+19: iload_1        
+20: ireturn        
+```
 
 ## Задача 4
 > Работа с qemu. Скачать и установить ISO-образ Alpine Linux для виртуальных машин с официального сайта. Создать с помощью qemu образ жесткого диска (опция -f qcow2). Объем диска 500 Мб. Запустить Alpine Linux с CD-ROM. Установить систему на sda. Изменить motd. Загрузиться уже с sda. Прислать полный список команд для установки и загрузки, а также скриншот с motd, где фигурируют ваши имя и фамилия.
