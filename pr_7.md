@@ -14,10 +14,12 @@
 ## Задача 2
 >На языке PlantUML реализовать диаграмму на рисунке ниже. Прислать текст на PlantUML и картинку-результат, в которой ФИО студента заменены Вашими собственными. Обратите внимание на оформление, желательно придерживаться именно его, то есть без стандартного желтого цвета и проч. Чтобы много не писать используйте псевдонимы с помощью ключевого слова "as".
 
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/3b386388-f3c8-4ef9-9867-aa2528533a31">
+<img width="394" alt="image" src="https://github.com/user-attachments/assets/1c84ce8a-784d-4d1a-a030-3c8f2f9bc71c">
+
 
 ```PlantUML
 @startuml
+skinparam monochrome true
 actor "Студент Спесивцева А.А." as Студент
 database "Piazza"
 actor "Преподаватель"
